@@ -17,6 +17,7 @@ package com.example.android.architecture.blueprints.todoapp.tasks
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
@@ -47,7 +48,7 @@ class TasksActivity : AppCompatActivity(), TaskItemNavigator, TasksNavigator {
             setHomeAsUpIndicator(R.drawable.ic_menu)
             setDisplayHomeAsUpEnabled(true)
         }
-
+        Log.e("zqs", "TasksActivity onCreate")
         setupNavigationDrawer()
 
         setupViewFragment()
@@ -69,6 +70,7 @@ class TasksActivity : AppCompatActivity(), TaskItemNavigator, TasksNavigator {
     }
 
     private fun setupViewFragment() {
+        //nice_zqs 通过某个值为null时，去做某一个操作
         supportFragmentManager.findFragmentById(R.id.contentFrame)
             ?: replaceFragmentInActivity(TasksFragment.newInstance(), R.id.contentFrame)
     }

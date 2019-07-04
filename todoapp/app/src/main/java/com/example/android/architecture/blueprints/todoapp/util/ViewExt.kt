@@ -57,6 +57,7 @@ fun View.setupSnackbar(
     timeLength: Int
 ) {
 
+    //zqs: LiveData 绑定到对应的lifecycleOwner身上
     snackbarEvent.observe(lifecycleOwner, Observer { event ->
         event.getContentIfNotHandled()?.let {
             showSnackbar(context.getString(it), timeLength)

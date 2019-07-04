@@ -81,6 +81,7 @@ class TasksViewModel(
     val openTaskEvent: LiveData<Event<String>>
         get() = _openTaskEvent
 
+    //zqs: 一个空的事件传递，不传递参数！
     private val _newTaskEvent = MutableLiveData<Event<Unit>>()
     val newTaskEvent: LiveData<Event<Unit>>
         get() = _newTaskEvent

@@ -68,6 +68,10 @@ class AddEditTaskActivity : AppCompatActivity(), AddEditTaskNavigator {
                 }
             }
 
+    /**
+     * zqs: UI（Activity） 绑定的ViewModel
+     * @return AddEditTaskViewModel
+     */
     fun obtainViewModel(): AddEditTaskViewModel = obtainViewModel(AddEditTaskViewModel::class.java)
 
     companion object {

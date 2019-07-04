@@ -45,6 +45,7 @@ class TasksFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?): View? {
+        //zqs: TasksFragBinding 直接绑定tasks_frag.xml布局文件！！
         viewDataBinding = TasksFragBinding.inflate(inflater, container, false).apply {
             viewmodel = (activity as TasksActivity).obtainViewModel()
         }
